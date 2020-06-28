@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosRequestConfig, Method } from 'axios';
+import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 
 axios.interceptors.response.use(
   (response) => response,
@@ -13,7 +13,7 @@ axios.interceptors.response.use(
   },
 );
 
-export function ajax<Request, Response>(method: Method, url: string, request: Request): Promise<Response> {
+export function ajax<Request, Response>(method: string, url: string, request: Request): Promise<Response> {
   const config: AxiosRequestConfig = { method, url };
 
   if (method === 'GET' || method === 'DELETE') {
