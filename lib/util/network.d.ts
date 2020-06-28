@@ -1,2 +1,1 @@
-import { Method } from 'axios';
-export declare function ajax<Request, Response>(method: Method, url: string, request: Request): Promise<Response>;
+export declare function ajax<Request, Response>(method: string, url: string, request: Request): Promise<Response>;
