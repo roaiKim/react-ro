@@ -22,5 +22,5 @@ export function ajax<Request, Response>(method: string, url: string, request: Re
     config.data = request;
   }
 
-  return axios.request(config).then(response => response.data);
+  return axios.request(config).then((response) => response.data);
 }
