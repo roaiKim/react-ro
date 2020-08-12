@@ -25,6 +25,7 @@ module.exports = {
         "max-classes-per-file": "off",
         "react/static-property-placement": "off",
         "react/jsx-props-no-spreading": "off",
-        "no-shadow": "off"
+        "no-shadow": "off",
+        "object-curly-newline": ["error", { "ImportDeclaration": "never", "ExportDeclaration": "never" }]
     }
 };
