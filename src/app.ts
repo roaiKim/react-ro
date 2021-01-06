@@ -8,7 +8,7 @@ declare const window: any;
 
 function composeWithDevTools(enhancer: StoreEnhancer): StoreEnhancer {
   let composeEnhancers = compose;
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV !== 'production') {
     const extension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
     if (extension) {
       composeEnhancers = extension({

@@ -1,7 +1,7 @@
-import { History } from "history";
-import { Store } from "redux";
-import { ActionHandler } from "./module";
-import { State } from "./reducer";
+import { History } from 'history';
+import { Store } from 'redux';
+import { ActionHandler } from './module';
+import { State } from './reducer';
 interface App {
     readonly browserHistory: History;
     readonly store: Store<State>;
