@@ -1,11 +1,13 @@
 {
     "name": "react-basc",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "main": "lib/index.js",
     "module": "lib/index.js",
     "types": "lib/index.d.ts",
     "license": "MIT",
-    "files": ["lib"],
+    "files": [
+        "lib"
+    ],
     "scripts": {
         "build": "tsc -p ./tsconfig.json"
     },
