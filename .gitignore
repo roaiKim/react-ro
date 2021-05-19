@@ -10,3 +10,5 @@ src/core
 yarn.lock
 lib
 libs
+dist
+pure

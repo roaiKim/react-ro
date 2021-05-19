@@ -9,7 +9,8 @@
         "lib"
     ],
     "scripts": {
-        "build": "tsc -p ./tsconfig.json"
+        "build": "tsc -p ./tsconfig.json",
+        "pure": "tsc --declaration false --target esnext --sourceMap false --outDir pure -p ./tsconfig.json"
     },
     "devDependencies": {
         "@babel/core": "7.10.2",
