@@ -10,7 +10,8 @@
     ],
     "scripts": {
         "build": "tsc -p ./tsconfig.json",
-        "pure": "tsc --declaration false --target esnext --sourceMap false --outDir pure -p ./tsconfig.json"
+        "pure": "tsc --declaration false --target esnext --sourceMap false --outDir pure --jsx Preserve --useDefineForClassFields true -p ./tsconfig.json",
+        "web": "tsc --declaration false --target esnext --sourceMap false --outDir ../all/website/src/core --jsx Preserve --useDefineForClassFields true -p ./tsconfig.json"
     },
     "devDependencies": {
         "@babel/core": "7.14.3",
