@@ -6,10 +6,14 @@ import { withRouter } from 'react-router';
 import { app } from '../app';
 
 interface BootstrapOption {
-  componentType: ComponentType<{}>
+  entryComponent: React.ComponentType;
 }
 
-function renderDOM(EntryComponent: ComponentType<any>) {
+export function bootstrarp(config: BootstrapOption): void {
+  renderRoot(config.entryComponent);
+}
+
+function renderRoot(EntryComponent: ComponentType<any>) {
   const rootElement: HTMLDivElement = document.createElement('div');
   rootElement.style.transition = 'all 150ms ease-in 100ms';
   rootElement.style.opacity = '0';
@@ -33,6 +37,9 @@ function renderDOM(EntryComponent: ComponentType<any>) {
   );
 }
 
-export function startApp(config: BootstrapOption): void {
-  renderDOM(config.componentType);
+function injectRootContainer(): HTMLElement {
+  const rootContainer = document.createElement("main");
+  rootContainer.id = "react-app-root";
+  document.body.appendChild(rootContainer);
+  return rootContainer;
 }
