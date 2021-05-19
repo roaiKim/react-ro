@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "outDir": "lib",
+    "outDir": "dist",
     "module": "esnext",
-    "target": "es5",
+    "target": "esnext",
     "moduleResolution": "node",
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
@@ -16,7 +16,7 @@
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
     "downlevelIteration": true,
-    "declaration": true
+    "declaration": false
   },
   "files":["src/index.ts"]
 }
