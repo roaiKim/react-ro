@@ -10,7 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "jsx": "react",
-    "lib": ["dom", "es2017"],
+    "lib": ["dom", "esnext"],
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

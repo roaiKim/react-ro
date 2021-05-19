@@ -7,7 +7,7 @@ build/
 yarn-error.log
 node_modules/
 src/core
-yarn.lock
+# yarn.lock
 lib
 libs
 dist
