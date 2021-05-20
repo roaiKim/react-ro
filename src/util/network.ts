@@ -1,7 +1,10 @@
 import axios, { AxiosError, AxiosRequestConfig, Method } from 'axios';
 
 axios.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    console.info("response", response)
+    return response
+  },
   (error: AxiosError) => {
     if (error.response) {
       // 这里是其他错误

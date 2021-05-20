@@ -27,13 +27,14 @@ export class ModuleProxy<M extends Module<any>> {
 
       constructor(props: P) {
         super(props);
-        this.lifecycleSaga();
+        this.initialLifecycle();
       }
 
       componentDidUpdate(prevProps: Readonly<P>) {
         const prevLocation = (prevProps as any).location;
-        const currentLocation = (this.props as any).location;
-        const currentRouteParams = (this.props as any).match ? (this.props as any).match.params : null;
+        const props = this.props as RouteComponentProps & P;
+        const currentLocation = props.location;
+        const currentRouteParams = props.match ? props.match.params : null;
         if (currentLocation && currentRouteParams && prevLocation !== currentLocation && lifecycleListener.onRender.isLifecycle) {
           app.store.dispatch(actions.onRender(currentRouteParams, currentLocation));
         }
@@ -49,7 +50,7 @@ export class ModuleProxy<M extends Module<any>> {
         }
       }
 
-      private async lifecycleSaga() {
+      private async initialLifecycle() {
         const props = this.props as (RouteComponentProps | {});
         if (lifecycleListener.onRender.isLifecycle) {
           if ('match' in props && 'location' in props) {
